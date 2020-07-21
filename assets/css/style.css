@@ -16,12 +16,19 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    background-image: url("../Images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1{
     font-weight: bold;
     font-size: 36px;
-    
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: 0;
     
     color: yellow;
@@ -49,7 +56,16 @@ header nav ul li a{
     padding:10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
+header nav ul li a:hover{
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
 
 footer {
     background-color: #fce138;
@@ -81,7 +97,8 @@ section{
     
     background-image: url("../Images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -101,18 +118,21 @@ section{
     font-size: 48px;
     color: #fce138;
     font-style: italic;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .hero-form{
     
     padding:20px;
     color:#024e76;
-    background-color: #fce138;
+    background-color:rgba(252,225,56,0.8);
     border-color: #024e76;
     border-style: solid;
     border-width:3px;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
 }
 
 h3{
@@ -135,7 +155,14 @@ h3{
      color: #024e76;
      width: 100%;
      margin-bottom: 15px;
+     border-radius: 10px;
+     background-color: rgba(255,255,255,0.75);
 
+}
+
+.form-input:focus{
+    background-color: white;
+    outline: none;
 }
 .hero-form label{
     margin: 0 5px;
@@ -147,6 +174,12 @@ h3{
     padding:10px 20px;
     font-size: 16px;
     border: none;
+    border-radius: 10px;
+
+}
+
+.hero-form button:hover{
+    background: #39a6b2;
 }
 
 
@@ -187,6 +220,10 @@ h3{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.step:last-child{
+    border-bottom: none;
 }
 
 .secondary-border{
@@ -341,6 +378,12 @@ h3{
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.75);
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    background-color: white;
+    outline: none;
 }
 
 .contact-form button{
@@ -351,6 +394,13 @@ h3{
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+
+}
+
+.contact-form button:hover{
+    color: #fce138;
+    background: #39a6b2;
 }
 
 .services{
@@ -412,6 +462,7 @@ h3{
    header{
        padding-bottom: 0;
        justify-content: center;
+       position: relative;
    }
 
    header h1{
