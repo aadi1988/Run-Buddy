@@ -13,6 +13,9 @@ body{
 header{
     padding: 25px 35px;
     background-color: #39a6b2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header h1{
@@ -20,7 +23,7 @@ header h1{
     font-size: 36px;
     
     margin: 0;
-    display: inline;
+    
     color: yellow;
 }
 
@@ -30,35 +33,42 @@ header a{
 }
 
 header nav{
-    float: right;
+    
     margin: 7px 0;
 }
 
-header nav ul li{
-    display: inline;
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
 }
 
 header nav ul li a{
-    margin:0 30px;
+    padding:10px 15px;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.55vw;
 }
 
 footer {
     background-color: #fce138;
     width: 100%;
     padding: 40px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 footer h2{
-    display : inline;
+    
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
 
 footer div{
-    float: right;
+    
     line-height:1.5;
     text-align: right;
 }
@@ -68,26 +78,41 @@ section{
 }
 
 .hero{
-    height: 600px;
+    
     background-image: url("../Images/hero-bg.jpg");
     background-size: cover;
     background-position: center;
-    position: relative;
-   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
+.hero-cta{
+    width: 35%;
+    text-align: right;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 5%;
+}
+
+.hero-cta h2{
+    font-size: 48px;
+    color: #fce138;
+    font-style: italic;
+}
 
 .hero-form{
-    width:500px;
+    
     padding:20px;
     color:#024e76;
     background-color: #fce138;
     border-color: #024e76;
     border-style: solid;
     border-width:3px;
-    position: absolute;
-    bottom: 120px;
-    right: 140px;
+    width: 40%;
+    margin: 3.5%;
 }
 
 h3{
@@ -124,18 +149,15 @@ h3{
     border: none;
 }
 
-.intro{
-    text-align: center;
-}
 
 .section-title{
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px; /*top right bottom left*/
     border-bottom: 3px solid;
-    display: inline-block;
-
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 35%;
 }
 
 .primary-border{
@@ -148,63 +170,93 @@ h3{
     width: 80%;
     font-size: 20px;
     margin: auto auto;
+    text-align: center;
 }
 
 .steps{
-    text-align: center;
+    
     background: #fce138;
+}
+
+.step{
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .secondary-border{
     border-color:#39a6b2;
 }
 
-.steps div{
-    margin-bottom: 80px;
-}
-
-.steps img{
-    width: 10%;
-    margin: 10px 0;
-
-}
 
 .steps h3{
     color: #024e76;
     font-size: 46px;
     margin-top: 10px;
+    flex: 1 30%;
 }
 
-.steps p{
+.step-info{
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.step-img{
+    flex: 1 12%;
+    margin-right: 20px;
+}
+
+.step-img img{
+    width: 100%;
+}
+
+.step-text{
+    flex: 12;
+}
+.step-text p{
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px;
 }
 
-.steps span{
-    font-size: 38px;
+.step-text h4{
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
 }
 
 .trainers{
-    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .trainer{
-    width: 900px;
-    margin: 0 auto 30px auto;
+    
+    margin: 20px;
     background: #024e76;
     color: #fce138;
-    overflow: auto;
+    flex: 1;
 }
 
 .trainer img{
-    width: 35%;
-    float: left;
+    width: 100%;
+    
 }
 
 .trainer-bio{
-    float: left;
-    width: 65%;
-    padding: 35px; 
+    
+    
+    padding: 25px; 
+    line-height: 1.3;
 }
 
 .text-left{
@@ -215,42 +267,47 @@ h3{
     text-align:right;
 }
 
+.flex-row{
+    display: flex;
+}
+
 .trainer-bio h3{
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    
 }
 
 .trainer-bio h4{
     font-weight: lighter;
-    font-size: 26px;
-    margin-bottom:25px;
+    font-size: 22px;
+    margin-bottom:15px;
 }
 
 .trainer bio p{
-    line-height: 1.3;
+    
     font-size: 17px;
 }
 
 .contact{
     background-color: #024e76;
-    text-align: center;
 }
 
 .contact h2{
     color: #fce138;
 }
 
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .contact-info iframe{
-    width: 400px;
+    
     height: 400px;
 }
 
 .contact-info div{
-    width: 410px;
-    display: inline-block;
-    vertical-align:top;
-    text-align:left;
-    margin: 30px 0 0 60px;
+    
     color: white;
 }
 
@@ -261,11 +318,220 @@ h3{
 .contact-info p, .contact-info address{
     line-height: 1.5;
     margin:20px 0;
-    font-size:20px;
+    font-size:16px;
     font-style: normal;
 }
 
 
 .contact-info address a{
     color: #fce138;
+}
+
+.contact-info > *{
+    flex:1;
+    margin: 15px;
+}
+
+.contact-form input, .contact-form textarea{
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.contact-form button{
+    width: 100%;
+    border: none;
+    background: #fce138;
+    color: #024e76;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+}
+
+.services{
+    background-color: #fce138;
+}
+
+.service-grid-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.service-grid-container{
+    background: lightyellow;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,4fr);
+    grid-template-rows: repeat(5,1fr) 2fr;
+    
+    border: 2px solid #024e76;
+    color: #024e76;
+    font-size: 1.2rem;
+  
+}
+
+.service-grid-item{
+    
+    padding: 15px 0;
+    border: 2px solid #024e76;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.service-grid-item.basic{
+    grid-column: 2/ span 1;
+}
+
+.service-grid-item.subscr{
+    grid-column: 2/span2;
+}
+
+.service-grid-item.cancel{
+    grid-row:1/span 6;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 980px){
+   header{
+       padding-bottom: 0;
+       justify-content: center;
+   }
+
+   header h1{
+       width: 100%;
+       text-align: center;
+   }
+
+   header nav ul{
+       margin-top: 20px;
+       width: 100%;
+       justify-content: center;
+   }
+
+   header nav ul li a{
+       font-size: 20px;
+   }
+
+   footer h2, footer div{
+       text-align: center;
+       width: 100%;
+   }
+
+   .hero-cta, .hero-form{
+       width: 100%;
+   }
+
+   .hero-cta{
+       text-align: center;
+   }
+
+   .section-title{
+       width: 80%;
+   }
+
+   .trainer{
+       flex: 0 70%;
+   }
+
+   .contact-info iframe{
+       flex:1 100%;
+   }
+}
+@media screen and (max-width: 768px){
+    section{
+        padding: 30px 15px;
+    }
+
+    .step h3{
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-info{
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img{
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top:15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text{
+        flex: 100%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .hero-form button{
+        width: 100%;
+    }
+
+    .section-title{
+        width: 95%;
+    }
+
+    .intro p{
+        width: 100%;
+    }
+
+    .trainer{
+        flex: 0 100%;
+    }
+
+    .contact-info{
+        text-align: center;
+    }
+
+    .contact-info > * {
+        flex: 0 100%;
+    }
+
+    .contact-form{
+        order: 3;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .service-grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-grid-item.basic{
+        grid-column-end: 1;
+    }
+
+    .service-grid-item.subscr{
+        grid-column: 1/span 2;
+    }
+
+    .service-grid-item.cancel{
+        writing-mode: horizontal-tb;
+        
+        grid-column:1/span 2;
+        grid-row: 7;
+        transform: none;
+    }
+
+
 }
